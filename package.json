@@ -15,6 +15,10 @@
     "email": "vmakichyan0@gmail.com"
   },
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DannZzz/react-validator"
+  },
   "dependencies": {
     "@onlydann/validator-form": "latest"
   },
