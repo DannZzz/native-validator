@@ -1,0 +1,24 @@
+{
+  "name": "@onlydann/react-validator",
+  "version": "1.0.0",
+  "description": "React Input component for working with validator-form",
+  "main": "dist/index.js",
+  "keywords": [
+    "validator",
+    "validator-form",
+    "form",
+    "react",
+    "react-form"
+  ],
+  "author": {
+    "name": "Dann",
+    "email": "vmakichyan0@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@onlydann/validator-form": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.25"
+  }
+}
