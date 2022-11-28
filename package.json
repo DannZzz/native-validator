@@ -24,5 +24,8 @@
   },
   "devDependencies": {
     "@types/react": "^18.0.25"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
