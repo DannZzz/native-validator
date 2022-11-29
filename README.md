@@ -1,22 +1,23 @@
-# React input component for working with [validator-form](https://www.npmjs.com/package/@onlydann/validator-form)
+# React Native input component for working with [validator-form](https://www.npmjs.com/package/@onlydann/validator-form)
 
 ## Install
 
 ```shell
-npm install @onlydann/react-validator
+npm install @onlydann/native-validator
 ```
 
 ### Or
 
 ```shell
-yarn add @onlydann/react-validator
+yarn add @onlydann/native-validator
 ```
 
 # Usage
 
 ```js
 import { ValidatorForm, Validator } from "@onlydann/validator-form";
-import { ValidatorInput } from "@onlydann/react-validator";
+import { ValidatorInput } from "@onlydann/native-validator";
+import { View, Button } from "react-native";
 
 // any form
 const form = new ValidatorForm({
@@ -29,13 +30,13 @@ const form = new ValidatorForm({
 
 // any component
 const Home = () => {
-    // use ValidatorInput instead of <input/>
-    // ValidatorInput returns <input/> component and you can use its all props except "value"
+    // use ValidatorInput instead of <TextInput/>
+    // ValidatorInput returns <TextInput/> component and you can use its all props except "value"
     return (
-        <div>
+        <View>
             <ValidatorInput className="my-input" validator={form.fields.name}>
-            <button onClick={() => form.valid && console.log(form.fields.name.currentValue)}>Show</button>
-        </div>
+            <Button onPress={() => form.valid && console.log(form.fields.name.currentValue) title="Show"}/>
+        </View>
     )
 }
 

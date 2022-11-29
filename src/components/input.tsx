@@ -1,32 +1,26 @@
-import { useState } from "react";
+import { TextInput, TextInputProps } from "react-native";
+import React, { useState } from "react";
 import { Validator } from "@onlydann/validator-form";
 
 export const ValidatorInput = (
-  props: { validator: Validator } & Omit<
-    React.DetailedHTMLProps<
-      React.InputHTMLAttributes<HTMLInputElement>,
-      HTMLInputElement
-    >,
-    "value"
-  >
+  props: { validator: Validator } & Omit<TextInputProps, "value">
 ) => {
   const [val, setVal] = useState(props.validator.defaultValue);
 
-  const onChange = props.onChange;
+  const onChangeText = props.onChangeText;
   const withoutChange = { ...props };
-  delete withoutChange.onChange;
+  delete withoutChange.onChangeText;
   delete (withoutChange as any).value;
 
   return (
-    <input
+    <TextInput
       value={val}
-      onChange={(e) => {
-        props?.validator?.change(e.target.value);
-        setVal(e.target.value);
-        onChange?.(e);
-      }}
       {...withoutChange}
+      onChangeText={(txt) => {
+        props?.validator?.change(txt);
+        setVal(txt);
+        onChangeText?.(txt);
+      }}
     />
   );
 };
-//

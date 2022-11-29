@@ -1,13 +1,16 @@
 {
-  "name": "@onlydann/react-validator",
+  "name": "@onlydann/native-validator",
   "version": "1.0.0",
-  "description": "React Input component for working with validator-form",
+  "description": "React Native Input component for working with validator-form",
   "main": "dist/index.js",
   "keywords": [
     "validator",
     "validator-form",
     "form",
     "react",
+    "react-native",
+    "native-form",
+    "native",
     "react-form"
   ],
   "author": {
@@ -17,15 +20,16 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DannZzz/react-validator"
+    "url": "https://github.com/DannZzz/native-validator"
   },
   "dependencies": {
     "@onlydann/validator-form": "latest"
   },
-  "devDependencies": {
-    "@types/react": "^18.0.25"
-  },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-native": "^0.70.7"
   }
 }

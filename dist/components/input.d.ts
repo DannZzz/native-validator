@@ -1,5 +1,6 @@
 /// <reference types="react" />
+import { TextInputProps } from "react-native";
 import { Validator } from "@onlydann/validator-form";
 export declare const ValidatorInput: (props: {
     validator: Validator;
-} & Omit<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "value">) => JSX.Element;
+} & Omit<TextInputProps, "value">) => JSX.Element;
